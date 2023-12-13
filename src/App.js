@@ -7,7 +7,7 @@ function App() {
     return(
         <main className='container'>
             <h1 className='title'>
-                Password Generator
+                Password Generator!
             </h1>
             <DisplayPassword/>
             <GeneratePassword/>
