@@ -1,0 +1,39 @@
+.container{
+    height: 80px;
+    padding: 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Dark-Grey, #24232C);
+}
+
+.password{
+    color: var(--Almost-White, #E6E5EA);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--font);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.copyIcon{
+    width: 41px;
+    height: 44px;
+    mask-image: url('./icons/icon-copy.svg');
+    -webkit-mask-image: url('./icons/icon-copy.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 21px 24px;
+    -webkit-mask-size: 21px 24px;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: #A4FFAF;
+    cursor: pointer;
+}
+
+.copyIcon:hover{
+    background-color: white;
+}
+

@@ -1,0 +1,24 @@
+.checkbox{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Almost-White, #E6E5EA);
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox:hover{
+    border: 2px solid var(--Neon-Green, #A4FFAF);
+}
+
+.checkbox_mark{
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+.ignore{
+    display: none;
+}
