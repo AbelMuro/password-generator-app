@@ -1,3 +1,11 @@
+.container{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    border: none;
+    padding: 0px;
+}
+
 .checkbox{
     width: 20px;
     height: 20px;
@@ -21,4 +29,14 @@
 
 .ignore{
     display: none;
+}
+
+.label{
+    color: var(--Almost-White, #E6E5EA);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

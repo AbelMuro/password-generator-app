@@ -5,7 +5,10 @@ import CheckBox from './CheckBox';
 function CheckBoxes() {
     return(
         <fieldset className={styles.checkboxes}>
-            <CheckBox/>
+            <CheckBox id='uppercase' label='Include Uppercase Letters'/>
+            <CheckBox id='lowercase' label='Include Lowercase Letters'/>
+            <CheckBox id='numbers' label='Include Numbers'/>
+            <CheckBox id='symbols' label='Include Symbols'/>
         </fieldset>
     )
 }
