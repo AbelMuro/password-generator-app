@@ -12,16 +12,12 @@ function GeneratePassword() {
     const handleSubmit = (e) => {
         e.preventDefault();
         let length = e.target.elements[0].value           //referencing the input type range
-        let uppercase = e.target.elements.uppercase.value;
-        let lowercase = e.target.elements.lowercase.value;
-        let numbers = e.target.elements.numbers.value;
-        let symbols = e.target.elements.symbols.value;
+        let uppercase = e.target.elements.uppercase.checked;
+        let lowercase = e.target.elements.lowercase.checked;
+        let numbers = e.target.elements.numbers.checked;
+        let symbols = e.target.elements.symbols.checked;
 
         length = Number(length);                           //type conversion
-        uppercase = JSON.parse(uppercase);
-        lowercase = JSON.parse(lowercase);
-        numbers = JSON.parse(numbers);
-        symbols = JSON.parse(symbols);
 
         if(!length){
             alert('Please enter a length greater than 0');

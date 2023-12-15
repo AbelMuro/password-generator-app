@@ -6,12 +6,11 @@ const initialState = {
     lowercase: false,
     numbers: false,
     symbols: false,
-    strength: 0,
+    strength: undefined,
     password: ''
 }
 
 const passwordReducer = (password = initialState, action) => {
-
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
     const numbers = "0123456789";
@@ -45,7 +44,6 @@ const passwordReducer = (password = initialState, action) => {
                 symbols: action.symbols,
             }
         case 'GENERATE_PASSWORD':
-
             let generatedPassword = ''
             let allowedCharacters = '';
             allowedCharacters += password.uppercase ? uppercase : '';
@@ -62,6 +60,9 @@ const passwordReducer = (password = initialState, action) => {
             let conditionsMet = conditions.reduce((acc, condition) => condition ? acc + 1: acc , 0);
             conditionsMet = Math.floor(conditionsMet/2);
             conditionsMet += Math.floor(password.length / 10);
+
+            if(!conditionsMet)        
+            conditionsMet++;
 
             return {
                 ...password,

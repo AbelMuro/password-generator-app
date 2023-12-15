@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 import {useSelector} from 'react-redux';
 
@@ -7,27 +7,29 @@ function PasswordStrength(){
     let bars = ['barOne', 'barTwo', 'barThree', 'barFour'];
 
     const useBarColor = () => {
-        if(strength === 1)
+        if(strength <= 1)
             return '#F64A4A';
         else if(strength === 2)
             return '#FB7C58';
         else if(strength === 3)
             return '#F8CD65';
-        else    
+        else  if(strength === 4)
             return '#A4FFAF';
+        else
+            return '';
     }
 
     const displayRank = () => {
-        if(strength === 0)
-            return '';
-        else if(strength === 1)
+        if(strength <= 1)
             return 'Too Weak!';
         else if(strength === 2)
             return 'weak';
         else if(strength === 3)
             return 'medium';
-        else   
-            return 'strong'
+        else  if(strength === 4) 
+            return 'strong';
+        else 
+            return '';
     }
 
     return(

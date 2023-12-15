@@ -72,3 +72,19 @@
     margin: auto;
     transition: none;
 }
+
+@media(max-width: 575px){
+    .generate_length{
+        margin-bottom: 7px;
+    }
+    .generate_length p{
+        font-size: 16px;
+    }
+    .generate_length span{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        margin-bottom: 32px;
+    }
+}

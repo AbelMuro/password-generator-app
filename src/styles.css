@@ -20,6 +20,7 @@
 
 body{
     min-height: 100vh;
+    margin: 0px;
     background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
 }
 
@@ -45,4 +46,16 @@ body{
     line-height: normal;
     text-align: center;
     margin: 0px;
+}
+
+@media(max-width: 575px){
+    .container{
+        width: 95%;
+        height: 540px;
+        gap: 16px;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
 }

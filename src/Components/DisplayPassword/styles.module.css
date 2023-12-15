@@ -1,13 +1,16 @@
 .container{
     height: 80px;
+    flex-shrink: 0;
     padding: 0px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--Dark-Grey, #24232C);
+    position: relative;
 }
 
 .password{
+    width: 0px;
     color: var(--Almost-White, #E6E5EA);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: var(--font);
@@ -16,9 +19,35 @@
     font-weight: 700;
     line-height: normal;
     margin: 0px;
+    background-color: transparent;
+    border: none;
+    flex: 1
 }
 
-.copyIcon{
+.password::placeholder{
+    color: var(--Almost-White, #E6E5EA);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--font);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    opacity: 0.25;
+}
+
+.password:focus{
+    outline: none;                                                                  
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.copy_icon{
     width: 41px;
     height: 44px;
     mask-image: url('./icons/icon-copy.svg');
@@ -37,3 +66,42 @@
     background-color: white;
 }
 
+.copy_message{
+    display: none;
+    color: var(--Neon-Green, #A4FFAF);
+    height: 24px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+    background-color: var(--Dark-Grey, #24232C);
+}
+
+@media(max-width: 575px){
+    .container{
+        height: 64px;
+        padding: 0px 16px;
+    }
+
+    .password{
+        font-size: 1.5rem;
+    }
+
+    .copy{
+        gap: 5px;
+    }
+
+
+    .copy_message{
+        font-size: 1rem;
+    }
+
+    .copy_icon{
+        width: 31px;
+        height: 34px;
+        mask-size: 17.5px 20px;
+    }
+}

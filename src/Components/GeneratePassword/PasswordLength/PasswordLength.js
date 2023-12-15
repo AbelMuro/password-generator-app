@@ -2,8 +2,6 @@ import React, {useRef, useEffect} from 'react';
 import styles from './styles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 
-
-//* i will need to style the backgroind color of container to green and create another div that has background color of black, the size of the div will be based on the value*/
 function PasswordLength() {
     const dispatch = useDispatch();
     const length = useSelector(state => state.length);

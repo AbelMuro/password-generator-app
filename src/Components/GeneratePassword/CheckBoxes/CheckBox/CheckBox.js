@@ -9,8 +9,7 @@ function CheckBox({id, label}) {
 
     const handleChecked = () => {
         const characterToInclude = id.toUpperCase();
-
-        dispatch({type: `INCLUDE_${characterToInclude}`,[id]: !checked})
+        dispatch({type: `INCLUDE_${characterToInclude}`,[id]: !checked});
     }
 
     return(
