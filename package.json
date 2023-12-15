@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "npm install --dev",    
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
-    "heroku-prebuild": "npm install --dev"
+    "build": "webpack --mode production"
     },
   "keywords": [],
   "author": "",
