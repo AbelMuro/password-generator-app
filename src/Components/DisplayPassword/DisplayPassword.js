@@ -21,7 +21,7 @@ function DisplayPassword(){
                 value={password} 
                 className={styles.password} 
                 placeholder='P4$5W0rD!' 
-                readonly
+                readOnly
             /> 
             <div className={styles.copy}>
                 <p className={styles.copy_message} ref={copiedMessageRef}>
