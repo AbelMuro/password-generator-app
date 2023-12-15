@@ -1,7 +1,4 @@
-const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowercase = "abcdefghijklmnopqrstuvwxyz";
-const numbers = "0123456789";
-const symbols = "~!@#$%^&*()-=_+[]{};:<>,./?";
+
 
 const initialState = {
     length: 10,
@@ -14,6 +11,13 @@ const initialState = {
 }
 
 const passwordReducer = (password = initialState, action) => {
+
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "~!@#$%^&*()-=_+[]{};:<>,./?";
+
+
     switch(action.type){
         case 'UPDATE_LENGTH':
             return {
@@ -41,19 +45,27 @@ const passwordReducer = (password = initialState, action) => {
                 symbols: action.symbols,
             }
         case 'GENERATE_PASSWORD':
+
             let generatedPassword = ''
             let allowedCharacters = '';
             allowedCharacters += password.uppercase ? uppercase : '';
             allowedCharacters += password.lowercase ? lowercase : '';
             allowedCharacters += password.numbers ? numbers : '';
             allowedCharacters += password.symbols ? symbols : '';
-        
+
             for(let i = 0; i < password.length; i++){
                 const index = Math.floor(Math.random() * allowedCharacters.length);
                 generatedPassword += allowedCharacters[index];
             }
+
+            let conditions = [password.uppercase, password.lowercase, password.numbers, password.symbols];
+            let conditionsMet = conditions.reduce((acc, condition) => condition ? acc + 1: acc , 0);
+            conditionsMet = Math.floor(conditionsMet/2);
+            conditionsMet += Math.floor(password.length / 10);
+
             return {
                 ...password,
+                strength: conditionsMet,
                 password: generatedPassword
             };
         default:

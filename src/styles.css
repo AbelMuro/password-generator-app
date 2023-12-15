@@ -10,6 +10,12 @@
 * {
     box-sizing: border-box;
     transition: all 0.2s linear;
+
+    --closest: 100;
+    --close: 75;
+    --far: 50;
+    --farther: 25;
+    --farthest: 0;
 }
 
 body{

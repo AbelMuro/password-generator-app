@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import styles from './styles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -7,11 +7,16 @@ import { useSelector, useDispatch } from 'react-redux';
 function PasswordLength() {
     const dispatch = useDispatch();
     const length = useSelector(state => state.length);
-
+    const rightSideBar = useRef();
 
     const handleChange = (e) => {
         dispatch({type: 'UPDATE_LENGTH', length: e.target.value});
     }
+
+    useEffect(() => {
+        let width = 100 - (length/20 * 100);
+        rightSideBar.current.style.width = `${width}%`;
+    }, [length])
 
     return(
         <>
@@ -32,7 +37,7 @@ function PasswordLength() {
                     max='20'
                     value={length}
                     onChange={handleChange}/>     
-                <div></div>              
+                <div className={styles.rightSide} ref={rightSideBar}/>           
             </div>   
 
         </>
