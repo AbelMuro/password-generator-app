@@ -9,6 +9,9 @@
     "build": "webpack --mode production",
     "heroku-postbuild": "webpack --config webpack.prod.js"
     },
+  "engines": {
+    "node": "16.15.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
