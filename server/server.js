@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use (express.json ());
 
 // Your static pre-build assets folder
-app.use (express.static (path.join (__dirname, '..', 'build')));
+app.use (express.static (path.join (__dirname, '..', 'dist')));
 
 // Root Redirects to the pre-build assets
 app.get ('/', function (req,res) {
