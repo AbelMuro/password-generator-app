@@ -2,6 +2,11 @@ import React, {useRef, useEffect} from 'react';
 import styles from './styles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 
+
+/* remember, 
+    the .container has a background-color: green, 
+    the input[type=range] has a background-color: transparent*, 
+    the .rightSide has a background-color: black */
 function PasswordLength() {
     const dispatch = useDispatch();
     const length = useSelector(state => state.length);

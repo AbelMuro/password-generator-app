@@ -28,31 +28,54 @@
 
 .container{
     width: 100%;
+    height: 8px;
     position: relative;
     margin-bottom: 42px;
+    background-color: var(--Neon-Green, #A4FFAF)
 }
 
 .bar{
     appearance: none;
+    position: absolute;
+    z-index: var(--close);
+    top: 0;
     width: 100%;
     height: 8px;
-    background-color: var(--Neon-Green, #A4FFAF);
+    background-color: transparent;
     margin: 0px;
+    padding: 0px;
 }
 
 .bar::-webkit-slider-thumb{
-    appearance: none;
-    position: relative;
-    z-index: var(--close);
+    appearance: none;    
+    -webkit-appearance: none;
     width: 28px;
     height: 28px;
     border-radius: 100%;
     background-color: var(--Almost-White, #E6E5EA);
     border: 2px solid var(--Almost-White, #E6E5EA);
     cursor: pointer;
-
 }
 
+.bar::-moz-range-thumb{
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: var(--Almost-White, #E6E5EA);
+    border: 2px solid var(--Almost-White, #E6E5EA);
+    cursor: pointer;
+}
+
+.bar::-ms-thump{
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: var(--Almost-White, #E6E5EA);
+    border: 2px solid var(--Almost-White, #E6E5EA);
+    cursor: pointer;
+}
 
 .bar::-webkit-slider-thumb:hover {
     background-color: var(--Very-Dark-Grey, #18171F);
@@ -60,16 +83,24 @@
     border: 2px solid var(--Neon-Green, #A4FFAF);
 }
 
+.bar::-moz-range-thumb:hover{
+    background-color: var(--Very-Dark-Grey, #18171F);
+    border-color: var(--Very-Dark-Grey, #18171F);
+    border: 2px solid var(--Neon-Green, #A4FFAF);
+}
+
+.bar::-ms-thump:hover{
+    background-color: var(--Very-Dark-Grey, #18171F);
+    border-color: var(--Very-Dark-Grey, #18171F);
+    border: 2px solid var(--Neon-Green, #A4FFAF);
+}
 
 .container .rightSide{
     background-color: var(--Very-Dark-Grey, #18171F);
-    height: 10px;
+    height: 8px;
     position: absolute;
     z-index: var(--far);
     right: 0px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     transition: none;
 }
 
@@ -83,7 +114,6 @@
     .generate_length span{
         font-size: 1.5rem;
     }
-
     .container{
         margin-bottom: 32px;
     }
