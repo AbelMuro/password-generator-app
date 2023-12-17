@@ -11,12 +11,12 @@ function GeneratePassword() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let length = e.target.elements[0].value           //referencing the input type range
+        let length = e.target.elements[1].value           //referencing the input type range
         let uppercase = e.target.elements.uppercase.checked;
         let lowercase = e.target.elements.lowercase.checked;
         let numbers = e.target.elements.numbers.checked;
         let symbols = e.target.elements.symbols.checked;
-
+        
         length = Number(length);                           //type conversion
 
         if(!length){
