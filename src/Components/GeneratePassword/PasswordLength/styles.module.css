@@ -1,11 +1,17 @@
-.generate_length{
+.length{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.length_title{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 26px;
 }
 
-.generate_length p{
+.length_title label{
     color: var(--Almost-White, #E6E5EA);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: var(--font);
@@ -16,7 +22,7 @@
     margin: 0px;
 }
 
-.generate_length span{
+.length_title span{
     color: var(--Neon-Green, #A4FFAF);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: var(--font);

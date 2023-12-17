@@ -23,17 +23,18 @@ function PasswordLength() {
     }, [length])
 
     return(
-        <>
-            <div className={styles.generate_length}>
-                <p>
+        <fieldset className={styles.length}>
+            <div className={styles.length_title}>
+                <label htmlFor='range'>
                     Character Length
-                </p>
+                </label>
                 <span>
                     {length}
                 </span>
             </div>  
             <div className={styles.container}>
                 <input 
+                    id='range'
                     type='range' 
                     name='length'
                     className={styles.bar}
@@ -43,9 +44,7 @@ function PasswordLength() {
                     onChange={handleChange}/>     
                 <div className={styles.rightSide} ref={rightSideBar}/>           
             </div>   
-
-        </>
-
+        </fieldset>
     )
 }
 
