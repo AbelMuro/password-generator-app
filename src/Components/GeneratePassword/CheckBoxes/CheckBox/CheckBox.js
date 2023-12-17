@@ -15,7 +15,7 @@ function CheckBox({id, label}) {
     return(
         <fieldset className={styles.container}>
             <label className={styles.checkbox} htmlFor={id}>
-                {checked && <img src={icons['mark']} className={styles.checkbox_mark} alt='check mark'/>}
+                {checked && <img src={icons['mark']} className={styles.checkbox_mark}/>}
                 <input id={id} name={id} type='checkbox' className={styles.ignore} checked={checked} onChange={handleChecked}/>
             </label>
             <label className={styles.label} htmlFor={id}>
