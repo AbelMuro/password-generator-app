@@ -39,7 +39,7 @@ function GeneratePassword() {
             <CheckBoxes/>
             <PasswordStrength/>
             <button className={styles.submit}>
-                Generate <img className={styles.arrow}/>
+                Generate <img className={styles.arrow} alt='right arrow'/>
             </button>
         </form>
     )
