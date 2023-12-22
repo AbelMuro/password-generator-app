@@ -6,6 +6,13 @@ import GeneratePassword from './Components/GeneratePassword';
 import './styles.css'
 
 function App() {
+    console.log('1');
+    debugger;
+    console.log('2');
+    debugger;
+    console.log('3');
+
+
     return(
         <Provider store={Store}>
             <main className='container'>
